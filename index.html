@@ -13,12 +13,25 @@
     <h1 class="text-amber-500 text-4xl py-4 text-center font-bold">User Management</h1>
 
     <div class="w-[90%] mx-auto">
-        <p class="shadow-sm hover:shadow-md transition-shadow block border-1 border-gray-400 py-3 px-1 mt-2 rounded-[10px]"><input
-                class="outline-none" id="inp" type="text"
-                placeholder="Search worker"></p>
-        <select  id="searchYear" class="my-[30px] shadow-sm hover:shadow-md transition-shadow p-2 px-3">
-            <option value="" selected disabled>Year</option>
-        </select>
+        <p
+            class="shadow-sm bg-amber-50 hover:shadow-md transition-shadow  text-amber-600 font-semibold block border-1 border-amber-100 py-3 px-1 mt-2 rounded-[10px]">
+            <input class="outline-none" id="inp" type="text" placeholder="Search worker">
+        </p>
+
+        <div class="grid grid-cols-4 ">
+            <select id="searchYear" class="my-[30px] rounded-2xl outline-0 w-[85%] text-amber-500 bg-amber-50 font-semibold shadow-sm hover:shadow-md transition-shadow p-2 px-3">
+                <option value="" selected disabled>Year</option>
+            </select>
+            <select id="searchRole" class="my-[30px] rounded-2xl outline-0 w-[85%] text-amber-500 bg-amber-50 font-semibold shadow-sm hover:shadow-md transition-shadow p-2 px-3">
+                <option value="" selected disabled>Role</option>
+            </select>
+            <select id="searchDep" class="my-[30px] rounded-2xl outline-0 text-amber-500 w-[85%] bg-amber-50 font-semibold shadow-sm hover:shadow-md transition-shadow p-2 px-3">
+                <option value="" selected disabled>Department</option>
+            </select>
+            <select id="searchSalary" class="my-[30px] w-[85%] rounded-2xl outline-0 text-amber-500 bg-amber-50 font-semibold shadow-sm hover:shadow-md transition-shadow p-2 px-3">
+                <option value="" selected disabled>Salary</option>
+            </select>
+        </div>
         <div id="cards" class="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 outline-none">
 
         </div>

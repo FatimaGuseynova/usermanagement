@@ -25,6 +25,40 @@ function cardsShow(dataWorker) {
 
     cards.innerHTML = dataCard.join(" ")
 }
+
+
+let empty = ""
+
+function infShow(infUsers, infFindArr) {
+    let ArrFilter = []
+
+    infFindArr.map(function (item) {
+        if (!ArrFilter.includes(item)) {
+            ArrFilter.push(item)
+        }
+    })
+
+    empty = ""
+
+    for (let i = 0; i < ArrFilter.length; i++) {
+        empty += `<option value="${ArrFilter[i]}" >${ArrFilter[i]}</option>`
+    }
+    infUsers.innerHTML += empty
+
+    infUsers.onchange = function () {
+        let value = infUsers.value
+
+        let filterInf = users.filter(function (item) {
+            if (+value === item.birthYear || value === item.role || value === item.department || +value === item.salary) {
+                return item
+            }
+        })
+
+        cardsShow(filterInf)
+    }
+
+}
+
 cardsShow(users)
 
 let searchYear = document.getElementById("searchYear")
@@ -43,20 +77,42 @@ inp.oninput = function () {
 
 }
 
-let empty = ""
 
-for (let i = 1955; i < 2027; i++) {
-    empty += `<option value="${i}">${i}</option>`
-}
+// year
+let birthArr = []
+let birth = users.map(function (item) {
+    return item.birthYear
+})
 
-searchYear.innerHTML += empty
+infShow(searchYear, birth)
 
-searchYear.onchange = function () {
-    let value = searchYear.value
-    let filterYear = users.filter(function (item) {
-        if (item.birthYear == value) {
-            return item
-        }
-    })
-    cardsShow(filterYear)
-}
+// role
+
+let searchRole = document.getElementById("searchRole")
+
+let role = users.map(function (item) {
+    return item.role
+})
+
+infShow(searchRole, role)
+
+// departament
+
+let searchDep = document.getElementById("searchDep")
+
+let depart = users.map(function (item) {
+    return item.department
+})
+
+infShow(searchDep, depart)
+
+// salary
+
+let searchSalary = document.getElementById("searchSalary")
+
+let salary = users.map(function (item) {
+    return item.salary
+})
+
+infShow(searchSalary, salary)
+
