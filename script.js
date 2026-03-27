@@ -116,3 +116,51 @@ let salary = users.map(function (item) {
 
 infShow(searchSalary, salary)
 
+// filter data
+
+let filterDataUsers = document.getElementById("filterDataUsers")
+
+filterDataUsers.onchange = function () {
+    let x = filterDataUsers.value
+    if (x == "az") {
+
+        sortedArrUsers = users.sort(function (a, b) {
+            return a.name.localeCompare(b.name)
+        })
+
+        cardsShow(sortedArrUsers)
+    }
+
+    else if (x == "za") {
+
+        sortedArrUsers = users.sort(function (a, b) {
+            return a.name.localeCompare(b.name)
+        })
+
+        cardsShow(sortedArrUsers.reverse())
+    }
+    else if (x == "azm") {
+        let sortedSalary = users.sort(function (a, b) {
+            return a.salary - b.salary;
+        });
+        cardsShow(sortedSalary);
+    }
+    else if (x == "cam") {
+        let sortedSalary = users.sort(function (a, b) {
+            return a.salary - b.salary;
+        });
+        cardsShow(sortedSalary.reverse());
+    }
+    else if (x == "azy") {
+        let sortedage = users.sort(function (a, b) {
+            return a.age - b.age;
+        });
+        cardsShow(sortedage);
+    }
+    else if (x == "cay") {
+        let sortedage = users.sort(function (a, b) {
+            return a.age - b.age;
+        });
+        cardsShow(sortedage.reverse());
+    }
+}

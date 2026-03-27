@@ -19,16 +19,30 @@
         </p>
 
         <div class="grid grid-cols-4 ">
-            <select id="searchYear" class="my-[30px] rounded-2xl outline-0 w-[85%] text-amber-500 bg-amber-50 font-semibold shadow-sm hover:shadow-md transition-shadow p-2 px-3">
+            <select id="filterDataUsers"
+                class="my-[30px] rounded-2xl outline-0 w-[85%] text-amber-500 bg-amber-50 font-semibold shadow-sm hover:shadow-md transition-shadow p-2 px-3">
+                <option value="" selected disabled>Filter data</option>
+                <option value="az">A-Z</option>
+                <option value="za">Z-A</option>
+                <option value="azm">Azdan coxa (Maash)</option>
+                <option value="cam">Coxdan aza (Maash)</option>
+                <option value="azy">Azdan coxa (Yash)</option>
+                <option value="cay">Coxdan aza (Yash)</option>
+            </select>
+            <select id="searchYear"
+                class="my-[30px] rounded-2xl outline-0 w-[85%] text-amber-500 bg-amber-50 font-semibold shadow-sm hover:shadow-md transition-shadow p-2 px-3">
                 <option value="" selected disabled>Year</option>
             </select>
-            <select id="searchRole" class="my-[30px] rounded-2xl outline-0 w-[85%] text-amber-500 bg-amber-50 font-semibold shadow-sm hover:shadow-md transition-shadow p-2 px-3">
+            <select id="searchRole"
+                class="my-[30px] rounded-2xl outline-0 w-[85%] text-amber-500 bg-amber-50 font-semibold shadow-sm hover:shadow-md transition-shadow p-2 px-3">
                 <option value="" selected disabled>Role</option>
             </select>
-            <select id="searchDep" class="my-[30px] rounded-2xl outline-0 text-amber-500 w-[85%] bg-amber-50 font-semibold shadow-sm hover:shadow-md transition-shadow p-2 px-3">
+            <select id="searchDep"
+                class="my-[30px] rounded-2xl outline-0 text-amber-500 w-[85%] bg-amber-50 font-semibold shadow-sm hover:shadow-md transition-shadow p-2 px-3">
                 <option value="" selected disabled>Department</option>
             </select>
-            <select id="searchSalary" class="my-[30px] w-[85%] rounded-2xl outline-0 text-amber-500 bg-amber-50 font-semibold shadow-sm hover:shadow-md transition-shadow p-2 px-3">
+            <select id="searchSalary"
+                class="my-[30px] w-[85%] rounded-2xl outline-0 text-amber-500 bg-amber-50 font-semibold shadow-sm hover:shadow-md transition-shadow p-2 px-3">
                 <option value="" selected disabled>Salary</option>
             </select>
         </div>
